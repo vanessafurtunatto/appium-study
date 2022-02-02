@@ -12,7 +12,6 @@ ${TOOLBAR_TITLE}        id=io.qaninja.android.twp:id/toolbarTitle
 
 ***Test Cases***
 Acessando a tela Dialogs
-    Get Started
     Open Navegator       
     Click Text                      DIALOGS                                                                           
     Wait Until Element Is Visible   ${TOOLBAR_TITLE}                                         

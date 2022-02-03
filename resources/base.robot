@@ -1,3 +1,11 @@
+***Settings***
+
+Library         AppiumLibrary
+Library         libs/extend.py
+Resource        helpers.robot
+
+
+
 ***Keywords***
 Open Session
     Set Appium Timeout      5
@@ -7,24 +15,14 @@ Open Session
     ...                     deviceName=Emulator
     ...                     app=${EXECDIR}/twp.apk
     ...                     udid=emulator-5554
+    Get Started
 Close Session
+    Capture Page Screenshot 
     Close Application
 
-Get Started
-    Wait Until Page Contains                                           ${START}                                        
-    Click Text                                                         ${START}
 
-Open Navegator
-    Wait Until Element Is Visible   ${MENU}    
 
-    Click Element                   ${MENU}
-    Wait Until Element Is Visible   ${NAV_VIEW} 
+
    
-***Settings***
 
-Library         AppiumLibrary
 
-***Variables***
-${START}        COMEÇAR 
-${MENU}         xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-${NAV_VIEW}     id=io.qaninja.android.twp:id/navView
